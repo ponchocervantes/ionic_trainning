@@ -17,7 +17,7 @@ import { LugaresService } from '../../services/lugares.service';
   templateUrl: 'lugar.html',
 })
 export class LugarPage {
-  lugar:any = { };
+  lugar:any = {};
   lugaresService: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public LugaresService:LugaresService) {
@@ -28,11 +28,15 @@ export class LugarPage {
     console.log('ionViewDidLoad LugarPage');
   }
 
-  guardarLugar() {
+  guardarLugar(lugar) {
+    if(!this.lugar.id){
+      this.lugar.id = Date.now();
+    }
     
-    lugar.id = Date.now();
-    this.lugaresService.createLugar(lugar);
-    console.log(lugar);
+     this.LugaresService.createLugar(this.lugar);
+     alert('¡Lugar guardado con éxito!');
+     this.navCtrl.pop();
+        console.log(this.lugar);
   }
 
 

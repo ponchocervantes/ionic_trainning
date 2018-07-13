@@ -15,9 +15,9 @@ export class LugaresService{
         return this.afDB.object('/lugares' + id);
     }
 
-    public createLugar(lugar){
-        return this.afDB.database.ref('/lugares' + lugar.id).set(lugar);
-    }
+    public createLugar(lugar) {
+        return this.afDB.database.ref('/lugares/' + lugar.id).set(lugar);
+      }
 
     public editLugar(lugar){
         return this.afDB.database.ref('/lugares' + lugar.id).set(lugar);

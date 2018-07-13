@@ -6,35 +6,36 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>lugar</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-  <ion-item>
-    <ion-label floating>Nombre</ion-label>
-    <ion-input type="text" [(ngModel)]="lugar.nombre"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label floating>Dirección</ion-label>
-    <ion-input type="text" [(ngModel)]="lugar.direccion"></ion-input>
-  </ion-item>
-  <ion-list>
+    <ion-navbar>
+      <ion-title>lugar</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list>
     <ion-item>
-      <ion-label>Categoría</ion-label>
-      <ion-select [(ngModel)]="lugar.categoria" >
-        <ion-option value="Aire Libre" >Aire Libre</ion-option>
-        <ion-option value="Lugar Cerrado" >Lugar Cerrado</ion-option>
-      </ion-select>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="lugar.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="lugar.direccion"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-label>Categoría</ion-label>
+        <ion-select [(ngModel)]="lugar.categoria" >
+          <ion-option value="Aire Libre" >Aire Libre</ion-option>
+          <ion-option value="Lugar Cerrado" >Lugar Cerrado</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label floating>Descripción</ion-label>
+      <ion-textarea [(ngModel)]="lugar.descripcion"></ion-textarea>
     </ion-item>
   </ion-list>
-  <ion-item>
-    <ion-label floating>Descripción</ion-label>
-    <ion-textarea [(ngModel)]="lugar.descripcion"></ion-textarea>
-  </ion-item>
-</ion-list>
-<button ion-button full (click)="guardarLugar(lugar)">Guardar Lugar</button>
-</ion-content>
+  <button ion-button full (click)="guardarLugar(lugar)">Guardar Lugar</button>
+  </ion-content>
