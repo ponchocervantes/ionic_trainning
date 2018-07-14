@@ -3,10 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { PerfilPage } from '../perfil/perfil';
 import { AboutPage } from '../about/about';
-import { Present } from '../../../node_modules/ionic-angular/umd/util/util';
-import { ModalController } from 'ionic-angular';
-import { ModalPage } from './modal-page';
-import { ViewController } from'ionic-angular';
+
+
 
 /**
  * Generated class for the TabsPage page.
